@@ -1,3 +1,12 @@
+"""
+app.py
+
+メイン
+* httpリクエストを受ける
+* グローバル変数を持つ
+"""
+
+
 import sqlite3
 import flask as f
 
