@@ -4,5 +4,15 @@ class dbHandler:
     def __init__(self):
         pass
 
-    def connect(self,db_path):
-        self.db = sqlite3.connect(db_path)
+    def initialize_db(self,db_path):
+        self.conn = sqlite3.connect(db_path)
+        self.cursor = self.conn.cursor()
+
+        self.cursor.execute(
+            "create table journal({})".format(
+                "string hoge,integer fuga"))
+
+if __name__=="__main__":
+    obj = dbHandler().initialize_db("test.db")
+
+

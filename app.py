@@ -6,6 +6,7 @@ app.py
 * グローバル変数を持つ
 """
 
+import db
 
 import sqlite3
 import flask as f
